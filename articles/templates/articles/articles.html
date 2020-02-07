@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Articles</title>
+	<link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+	<div class = "articlelist">
+		{% for article in articles %}
+			<h1><a href="">{{ article.title }}</a></h1>
+			<!-- 
+				note here that were referring the the model method
+			-->
+			<p> {{ article.snippet }} </p>
+			<p> {{ article.pub_date }} </p>
+		{% endfor %} 
+	</div>
+</body>
+</html>
